@@ -25,4 +25,4 @@ randoCsv([
 ]).pipe(ws)
 ```
 
-`rando-csv` takes a collection of header definitions where type and method are `[faker](https://www.npmjs.com/package/faker)` methods. For example, if you wanted fake food images `{ name: 'Food', type: 'image', method: 'food' }`. It returns a stream, so you can listen to `data` events or `pipe` it somewhere.
+`rando-csv` takes a collection of header definitions where type and method are [`faker`](https://www.npmjs.com/package/faker) methods. For example, if you wanted fake food images `{ name: 'Food', type: 'image', method: 'food' }`. It returns a stream, so you can listen to `data` events or `pipe` it somewhere.
