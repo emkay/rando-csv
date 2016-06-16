@@ -1,0 +1,39 @@
+{
+  "name": "rando-csv",
+  "version": "1.0.0",
+  "description": "Create a bunch of sample csv data",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emkay/rando-csv.git"
+  },
+  "keywords": [
+    "csv",
+    "data",
+    "sample",
+    "random",
+    "rando"
+  ],
+  "author": "Michael Matuzak <mmatuzak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emkay/rando-csv/issues"
+  },
+  "homepage": "https://github.com/emkay/rando-csv#readme",
+  "devDependencies": {
+    "standard": "^7.1.2",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "csv-write-stream": "^2.0.0",
+    "faker": "^3.1.0",
+    "from2-array": "0.0.4",
+    "never-ending-stream": "^2.0.0",
+    "pumpify": "^1.3.5",
+    "readable-stream": "^2.1.4",
+    "through2": "^2.0.1"
+  }
+}
