@@ -4,17 +4,19 @@ const from = require('from2-array')
 const nes = require('never-ending-stream')
 const through = require('through2')
 const pumpify = require('pumpify')
-const writer = csvWriter()
 
 module.exports = function randoCsv (headers, count) {
+  const writer = csvWriter()
   const csvHeaders = []
   const types = {}
   const methods = {}
-
+  const args = {}
+  
   headers.forEach((header) => {
     csvHeaders.push(header.name)
     types[header.name] = header.type
     methods[header.name] = header.method
+    args[header.name] = header.args
   })
 
   let row = {}
@@ -23,7 +25,8 @@ module.exports = function randoCsv (headers, count) {
   const ts = through.obj((chunk, enc, cb) => {
     const type = types[chunk]
     const method = methods[chunk]
-    row[chunk] = faker[type][method]()
+    const arg = args[chunk]
+    row[chunk] = faker[type][method](arg)
     headersCount -= 1
     if (headersCount === 0) {
       ts.push(row)
