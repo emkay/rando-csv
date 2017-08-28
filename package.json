@@ -1,6 +1,6 @@
 {
   "name": "rando-csv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a bunch of sample csv data",
   "main": "index.js",
   "scripts": {
