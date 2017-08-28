@@ -4,7 +4,9 @@
   "description": "Create a bunch of sample csv data",
   "main": "index.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,10 @@
   "homepage": "https://github.com/emkay/rando-csv#readme",
   "devDependencies": {
     "standard": "^7.1.2",
-    "tape": "^4.5.1"
+    "standard-version": "^4.2.0",
+    "tape": "^4.5.1",
+    "weallbehave": "^1.2.0",
+    "weallcontribute": "^1.0.8"
   },
   "dependencies": {
     "csv-write-stream": "^2.0.0",
