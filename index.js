@@ -5,8 +5,9 @@ const nes = require('never-ending-stream')
 const through = require('through2')
 const pumpify = require('pumpify')
 
-module.exports = function randoCsv (headers, count) {
-  const writer = csvWriter()
+module.exports = function randoCsv (headers, count, options) {
+  const writer = csvWriter(options)
+  
   const csvHeaders = []
   const types = {}
   const methods = {}
