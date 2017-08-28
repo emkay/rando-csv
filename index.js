@@ -4,9 +4,9 @@ const from = require('from2-array')
 const nes = require('never-ending-stream')
 const through = require('through2')
 const pumpify = require('pumpify')
-const writer = csvWriter()
 
-module.exports = function randoCsv (headers, count) {
+module.exports = function randoCsv (headers, count, options) {
+  const writer = csvWriter(options)
   const csvHeaders = []
   const types = {}
   const methods = {}
