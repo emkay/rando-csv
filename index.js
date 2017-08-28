@@ -7,12 +7,12 @@ const pumpify = require('pumpify')
 
 module.exports = function randoCsv (headers, count, options) {
   const writer = csvWriter(options)
-  
+
   const csvHeaders = []
   const types = {}
   const methods = {}
   const args = {}
-  
+
   headers.forEach((header) => {
     csvHeaders.push(header.name)
     types[header.name] = header.type
